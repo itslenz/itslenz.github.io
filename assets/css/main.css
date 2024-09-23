@@ -537,7 +537,7 @@ svg {
           flex-grow: 1;
 }
 .wrapper {
-  width: 2400px;
+  width: 960px;
   max-width: 90%;
   margin: 0.75em auto 0.75em;
   position: relative;
@@ -589,7 +589,7 @@ svg {
   position: relative;
   text-align: center;
   color:var(--main);
-  display: none;
+  opacity: 0;
 }
 .main-header .logo a {
   text-decoration: none;
