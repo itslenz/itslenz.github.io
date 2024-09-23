@@ -560,11 +560,12 @@ svg {
 }
 /* = = = = = = = = = = Header = = = = = = = = = = */
 .main-header {
+  width: 25%;
   font-family: var(--font2), sans-serif;
   padding: 15px 0;
   /*background-color: var(--background);*/
   background-image: url('/assets/img/branding/bbackground.jpg'); /* 使用你自己的图片路径 */
-  background-size: 130px 120px;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   -webkit-box-shadow: 0px -5px 15px var(--shadow);
