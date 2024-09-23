@@ -564,7 +564,7 @@ svg {
   padding: 15px 0;
   /*background-color: var(--background);*/
   background-image: url('/assets/img/branding/bbackground.jpg'); /* 使用你自己的图片路径 */
-  background-size: contain;
+  background-size: 100% 80%;
   background-position: center;
   background-repeat: no-repeat;
   -webkit-box-shadow: 0px -5px 15px var(--shadow);
@@ -589,7 +589,7 @@ svg {
   position: relative;
   text-align: center;
   color:var(--main);
-  display:none;
+  display: none;
 }
 .main-header .logo a {
   text-decoration: none;
@@ -597,7 +597,6 @@ svg {
   font-size: 27px;
   font-weight: var(--font2-light);
   color: var(--accent-dark);
-  display:none;
 }
 .main-nav {
   position: fixed;
