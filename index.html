@@ -3,23 +3,36 @@ layout: home-page
 ---
 {% include calculate_relative_base.html %}
 
-<ol class="post-card-box clearfix">
-  {% for post in paginator.posts %}
-  {% include remove_double_slash.html %}
-  <li>
-    <div class="post-card">
-      <a href="{{ post_url }}" title="{{ post.title }}" class="post-card-image" style="background: url('{{ relativebase }}assets/img/{{ post.img }}') center no-repeat; background-size: cover;">
-      </a>
-      <div class="post-card-body">
-        <p class="post-card-title-and-meta">
-          
-          <a href="{{ post_url }}" class="post-card-link">
-          {{ post.title }}
-          </a>
-          {% include post_meta.html type="post-card-meta" date="none" %}
-        </p>
+<!-- 引导页内容 -->
+<div class="welcome-container" id="welcomePage" style="text-align: center; height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+  <div class="avatar" style="width: 150px; height: 150px; background-image: url('{{ relativebase }}assets/img/avatar.jpg'); background-size: cover; background-position: center; border-radius: 50%;"></div>
+  <button class="enter-btn" onclick="showMainPage()" style="padding: 10px 20px; font-size: 16px; background-color: #326273; color: white; border: none; cursor: pointer; border-radius: 5px; margin-top: 20px;">进入</button>
+</div>
+
+<!-- 主页面内容 -->
+<div id="mainPage" style="display: none;">
+  <ol class="post-card-box clearfix">
+    {% for post in paginator.posts %}
+    {% include remove_double_slash.html %}
+    <li>
+      <div class="post-card">
+        <a href="{{ post_url }}" title="{{ post.title }}" class="post-card-image" style="background: url('{{ relativebase }}assets/img/{{ post.img }}') center no-repeat; background-size: cover;">
+        </a>
+        <div class="post-card-body">
+          <p class="post-card-title-and-meta">
+            <a href="{{ post_url }}" class="post-card-link">{{ post.title }}</a>
+            {% include post_meta.html type="post-card-meta" date="none" %}
+          </p>
+        </div>
       </div>
-    </div>
-  </li>
-  {% endfor %}
-</ol>
+    </li>
+    {% endfor %}
+  </ol>
+</div>
+
+<script>
+  function showMainPage() {
+    document.getElementById('welcomePage').style.display = 'none';
+    document.getElementById('mainPage').style.display = 'block';
+  }
+</script>
