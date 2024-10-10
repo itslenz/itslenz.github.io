@@ -4,13 +4,14 @@ layout: home-page
 {% include calculate_relative_base.html %}
 
 <!-- 引导页内容 -->
-<div class="welcome-container" id="welcomePage" style="text-align: center; height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+<div class="welcome-container" id="welcomePage" style="height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; background-color: #f0f0f0; text-align: center;">
   <div class="avatar" style="width: 150px; height: 150px; background-image: url('{{ relativebase }}assets/img/avatar.jpg'); background-size: cover; background-position: center; border-radius: 50%;"></div>
-  <button class="enter-btn" onclick="showMainPage()" style="padding: 10px 20px; font-size: 16px; background-color: #326273; color: white; border: none; cursor: pointer; border-radius: 5px; margin-top: 20px;">进入</button>
+  <button class="enter-btn" onclick="showMainPage()" style="padding: 15px 30px; font-size: 20px; background-color: #326273; color: white; border: none; cursor: pointer; border-radius: 10px; margin-top: 30px;">进入</button>
 </div>
 
-<!-- 主页面内容 -->
+<!-- 主页面内容，初始隐藏 -->
 <div id="mainPage" style="display: none;">
+  {% include header.html %} <!-- 头部包含文件 -->
   <ol class="post-card-box clearfix">
     {% for post in paginator.posts %}
     {% include remove_double_slash.html %}
@@ -28,11 +29,12 @@ layout: home-page
     </li>
     {% endfor %}
   </ol>
+  {% include footer.html %} <!-- 页脚包含文件 -->
 </div>
 
 <script>
   function showMainPage() {
-    document.getElementById('welcomePage').style.display = 'none';
-    document.getElementById('mainPage').style.display = 'block';
+    document.getElementById('welcomePage').style.display = 'none'; // 隐藏引导页
+    document.getElementById('mainPage').style.display = 'block';  // 显示主页面
   }
 </script>
