@@ -562,6 +562,7 @@ svg {
 .main-header {
   font-family: var(--font2), sans-serif;
   padding: 100px 0;
+  height: 400px;
   /*background-color: var(--background);*/
   background-image: url('/assets/img/branding/background.jpg'); /* 使用你自己的图片路径 */
   background-size: cover;
