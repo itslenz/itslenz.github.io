@@ -564,7 +564,7 @@ svg {
   padding: 100px 0;
   height: 250px;
   /*background-color: var(--background);*/
-  background-image: url('/assets/img/branding/bbackground.jpg'); /* 使用你自己的图片路径 */
+  background-image: url('/assets/img/branding/background.jpg'); /* 使用你自己的图片路径 */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
