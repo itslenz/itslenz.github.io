@@ -3,38 +3,48 @@ layout: home-page
 ---
 {% include calculate_relative_base.html %}
 
-<!-- 引导页内容 -->
+<!-- 引导页内容，初始只显示这个部分 -->
 <div class="welcome-container" id="welcomePage" style="height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; background-color: #f0f0f0; text-align: center;">
   <div class="avatar" style="width: 150px; height: 150px; background-image: url('{{ relativebase }}assets/img/avatar.jpg'); background-size: cover; background-position: center; border-radius: 50%;"></div>
   <button class="enter-btn" onclick="showMainPage()" style="padding: 15px 30px; font-size: 20px; background-color: #326273; color: white; border: none; cursor: pointer; border-radius: 10px; margin-top: 30px;">进入</button>
 </div>
 
-<!-- 主页面内容，初始隐藏 -->
+<!-- 主页面内容，初始完全隐藏 -->
 <div id="mainPage" style="display: none;">
-  {% include header.html %} <!-- 头部包含文件 -->
-  <ol class="post-card-box clearfix">
-    {% for post in paginator.posts %}
-    {% include remove_double_slash.html %}
-    <li>
-      <div class="post-card">
-        <a href="{{ post_url }}" title="{{ post.title }}" class="post-card-image" style="background: url('{{ relativebase }}assets/img/{{ post.img }}') center no-repeat; background-size: cover;">
-        </a>
-        <div class="post-card-body">
-          <p class="post-card-title-and-meta">
-            <a href="{{ post_url }}" class="post-card-link">{{ post.title }}</a>
-            {% include post_meta.html type="post-card-meta" date="none" %}
-          </p>
+  <!-- 头部，初始不显示 -->
+  <header id="headerSection">
+    {% include header.html %} <!-- 加载头部 -->
+  </header>
+
+  <!-- 主页面的实际内容 -->
+  <div class="content-area">
+    <ol class="post-card-box clearfix">
+      {% for post in paginator.posts %}
+      {% include remove_double_slash.html %}
+      <li>
+        <div class="post-card">
+          <a href="{{ post_url }}" title="{{ post.title }}" class="post-card-image" style="background: url('{{ relativebase }}assets/img/{{ post.img }}') center no-repeat; background-size: cover;">
+          </a>
+          <div class="post-card-body">
+            <p class="post-card-title-and-meta">
+              <a href="{{ post_url }}" class="post-card-link">{{ post.title }}</a>
+              {% include post_meta.html type="post-card-meta" date="none" %}
+            </p>
+          </div>
         </div>
-      </div>
-    </li>
-    {% endfor %}
-  </ol>
-  {% include footer.html %} <!-- 页脚包含文件 -->
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+
+  <!-- 页脚 -->
+  {% include footer.html %}
 </div>
 
 <script>
   function showMainPage() {
     document.getElementById('welcomePage').style.display = 'none'; // 隐藏引导页
-    document.getElementById('mainPage').style.display = 'block';  // 显示主页面
+    document.getElementById('mainPage').style.display = 'block';   // 显示主页面
+    document.getElementById('headerSection').style.display = 'block'; // 显示头部
   }
 </script>
