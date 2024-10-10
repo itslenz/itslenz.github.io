@@ -537,7 +537,7 @@ svg {
           flex-grow: 1;
 }
 .wrapper {
-  width: 960px;
+  width: 1100px;
   max-width: 90%;
   margin: 0.75em auto 0.75em;
   position: relative;
@@ -563,7 +563,7 @@ svg {
   font-family: var(--font2), sans-serif;
   padding: 15px 0;
   /*background-color: var(--background);*/
-  background-image: url('/assets/img/branding/bbackground.jpg'); /* 使用你自己的图片路径 */
+  background-image: url('/assets/img/branding/background.jpg'); /* 使用你自己的图片路径 */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
