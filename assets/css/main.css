@@ -565,7 +565,7 @@ svg {
   background-image: url('/assets/img/branding/back.jpg');
   background-size: cover;  /* 自动缩放图片，填充整个header */
   background-position: center;  /* 图片居中 */
-  
+  height: 300px;
   background-color: var(--background);
   -webkit-box-shadow: 0px -5px 15px var(--shadow);
           box-shadow: 0px -5px 15px var(--shadow);
