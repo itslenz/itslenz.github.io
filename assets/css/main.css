@@ -819,21 +819,23 @@ svg.menu-icon-house {
   display: flex;
   flex-wrap: wrap; /* 自动换行 */
   gap: 20px; /* 横向和纵向的间距 */
-  margin: 30px 0; /* 整个文章列表上下间距 */
+  margin: 50px 0 15px; /* 整个文章列表上下间距 */
+  padding: 0;
 }
 
 .post-card-box li {
-  flex: 1 1 calc(50% - 20px); /* 使每个元素的宽度是50%，并减去间距 */
   list-style: none;
+  flex: 1 1 calc(50% - 20px); /* 每个项目占据50%宽度，并减去间距 */
   margin: 0; /* 移除不必要的额外间距 */
+  box-sizing: border-box; /* 确保宽度和间距不会超出边界 */
 }
 
 .post-card {
   position: relative;
-  border-radius: 10px; /* 添加圆角 */
-  overflow: hidden; /* 确保圆角应用于内容 */
-  border: 2px solid #ddd; /* 添加边框（可选，若不需要边框可以去掉） */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影效果（可选） */
+  border-radius: 10px; /* 圆角 */
+  overflow: hidden; /* 保证圆角效果 */
+  border: 2px solid #ddd; /* 可选，添加边框 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 可选，添加阴影 */
 }
 .post-card-image {
   display: block;
