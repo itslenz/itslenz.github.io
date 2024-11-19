@@ -816,11 +816,8 @@ svg.menu-icon-house {
 }
 /* = = = = = = = = = = Post-Card (homepage) = = = = = = = = = = */
 .post-card-box {
-  display: flex;
-  flex-wrap: wrap; /* 自动换行 */
-  gap: 40px; /* 横向和纵向的间距 */
-  margin: 50px 0 15px; /* 整个文章列表上下间距 */
-  
+  gap: 40px;
+  margin: 50px 0 15px;
   padding: 0;
 }
 .post-card-box li {
