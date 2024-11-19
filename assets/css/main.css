@@ -818,8 +818,8 @@ svg.menu-icon-house {
 .post-card-box {
   display: flex;
   flex-wrap: wrap; /* 自动换行 */
-  gap: 20px; /* 横向和纵向的间距 */
-  margin: 30px 0; /* 整个文章列表上下间距 */
+  gap: 50px; /* 横向和纵向的间距 */
+  margin: 50px 0; /* 整个文章列表上下间距 */
 }
 .post-card-box li {
   width: calc(50% - 20px); /* 减去左右间距 */
@@ -829,6 +829,8 @@ svg.menu-icon-house {
 
 .post-card {
   position: relative;
+  border-radius: 10px; /* 添加圆角 */
+  overflow: hidden; /* 确保圆角应用于内容 */
 }
 .post-card-image {
   display: block;
