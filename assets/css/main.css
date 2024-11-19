@@ -822,7 +822,7 @@ svg.menu-icon-house {
   margin: 50px 0; /* 整个文章列表上下间距 */
 }
 .post-card-box li {
-  width: calc(50% - 20px); /* 减去左右间距 */
+  width: calc(50% - 10px); /* 调整宽度计算，确保对齐 */
   list-style: none;
   margin: 0; /* 移除不必要的额外间距 */
 }
@@ -831,6 +831,8 @@ svg.menu-icon-house {
   position: relative;
   border-radius: 10px; /* 添加圆角 */
   overflow: hidden; /* 确保圆角应用于内容 */
+  border: 2px solid #ddd; /* 添加边框（可选，若不需要边框可以去掉） */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影效果（可选） */
 }
 .post-card-image {
   display: block;
